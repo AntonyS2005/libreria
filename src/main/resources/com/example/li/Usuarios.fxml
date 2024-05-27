@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.UsuarioController">
+    <children>
+        <Label text="Buscar Usuario:" layoutX="20" layoutY="20"/>
+        <TextField fx:id="buscarUsuarioField" layoutX="120" layoutY="20"/>
+        <Button text="Buscar" layoutX="300" layoutY="20" onAction="#handleBuscarUsuarioAction"/>
+
+        <ComboBox fx:id="resultadosBusquedaUsuario" layoutX="120" layoutY="60" prefWidth="200" onAction="#handleSeleccionUsuarioAction"/>
+
+        <GridPane layoutX="20" layoutY="100" hgap="10" vgap="10">
+            <children>
+                <Label text="Nombre:"/>
+                <TextField fx:id="nombreField" GridPane.columnIndex="1"/>
+                <Label text="Username:" GridPane.rowIndex="1"/>
+                <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Password:" GridPane.rowIndex="2"/>
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label text="Role:" GridPane.rowIndex="3"/>
+                <TextField fx:id="roleField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
+
+        <Button text="Agregar" layoutX="20" layoutY="230" onAction="#handleAgregarUsuarioAction"/>
+        <Button text="Editar" layoutX="100" layoutY="230" onAction="#handleEditarUsuarioAction"/>
+        <Button text="Eliminar" layoutX="180" layoutY="230" onAction="#handleEliminarUsuarioAction"/>
+    </children>
+</AnchorPane>

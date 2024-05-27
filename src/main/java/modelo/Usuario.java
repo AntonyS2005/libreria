@@ -15,6 +15,12 @@ package modelo;
             this.password = password;
             this.role = role;
         }
+        public Usuario(String nombre, String username, String password, String role) {
+            this.nombre = nombre;
+            this.username = username;
+            this.password = password;
+            this.role = role;
+        }
 
         // Getters y Setters
         public int getId() {

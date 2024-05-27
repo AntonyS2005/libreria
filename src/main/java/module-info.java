@@ -6,4 +6,6 @@ module com.example.li {
 
     opens com.example.li to javafx.fxml;
     exports com.example.li;
+    exports modelo;
+    opens modelo to javafx.fxml;
 }

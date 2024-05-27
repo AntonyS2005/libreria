@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ProductosDAO {
 
-    public void agregarProducto(String nombre, double costo, double precio, int stock) {
+    public void agregarProducto(String nombre, double costo, double precio, int stock) throws SQLException {
         Conexion con = new Conexion();
         try (Connection conexion = con.getConexion();
              PreparedStatement stmt = conexion.prepareStatement("INSERT INTO Productos (nombre, costo, precio, stock) VALUES (?, ?, ?, ?)")) {
@@ -18,8 +18,7 @@ public class ProductosDAO {
             stmt.executeUpdate();
             System.out.println("Producto agregado correctamente.");
         } catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("Error al agregar el producto: " + e.getMessage());
+            throw e;
         }
     }
 
@@ -99,5 +98,28 @@ public class ProductosDAO {
             e.printStackTrace();
             System.out.println("Error al eliminar el producto: " + e.getMessage());
         }
+    }
+    public Producto obtenerProductoPorId(int id) {
+        Conexion con = new Conexion();
+        Producto producto = null;
+        try (Connection conexion = con.getConexion();
+             PreparedStatement stmt = conexion.prepareStatement("SELECT * FROM Productos WHERE id = ?")) {
+            stmt.setInt(1, id);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    producto = new Producto(
+                            rs.getInt("id"),
+                            rs.getString("nombre"),
+                            rs.getDouble("costo"),
+                            rs.getDouble("precio"),
+                            rs.getInt("stock")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error al obtener el producto por ID: " + e.getMessage());
+        }
+        return producto;
     }
 }

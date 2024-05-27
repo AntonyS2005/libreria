@@ -15,6 +15,13 @@ public class Producto {
         this.precio = precio;
         this.stock = stock;
     }
+    public Producto( String nombre, double costo, double precio ) {
+
+        this.nombre = nombre;
+        this.costo = costo;
+        this.precio = precio;
+    }
+
 
     // Getters y setters
     public int getId() {

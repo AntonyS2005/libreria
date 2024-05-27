@@ -207,5 +207,10 @@ public class AdminMenuController {
         }
     }
 
+    @FXML
+    private void handleUsuariosButtonAction() throws IOException {
+        cargarFXML("Usuarios.fxml");
+    }
+
 }
 

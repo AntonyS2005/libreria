@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="217.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.AdminMenuController">
+<AnchorPane prefHeight="217.0" prefWidth="297.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.AdminMenuController">
     <Button fx:id="agregarButton" layoutX="98.0" layoutY="35.0" onAction="#handleAgregarButtonAction" text="Agregar Producto" />
     <Button fx:id="editarButton" layoutX="104.0" layoutY="74.0" onAction="#handleEditarButtonAction" text="Editar Producto" />
     <Button fx:id="verStockButton" layoutX="120.0" layoutY="109.0" onAction="#handleVerStockButtonAction" text="Ver Stock" />
-    <Button fx:id="cerrarSesionButton" layoutX="110.0" layoutY="144.0" onAction="#handleCerrarSesionButtonAction" text="Cerrar Sesión" />
+    <Button fx:id="cerrarSesionButton" layoutX="110.0" layoutY="177.0" onAction="#handleCerrarSesionButtonAction" text="Cerrar Sesión" />
+    <Button fx:id="usuariosButton" layoutX="122.0" layoutY="144.0" onAction="#handleUsuariosButtonAction" text="Usuarios" />
 </AnchorPane>
