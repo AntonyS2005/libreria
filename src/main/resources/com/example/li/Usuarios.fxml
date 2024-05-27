@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.UsuarioController">
+<AnchorPane prefHeight="308.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.UsuarioController">
     <children>
-        <Label text="Buscar Usuario:" layoutX="20" layoutY="20"/>
-        <TextField fx:id="buscarUsuarioField" layoutX="120" layoutY="20"/>
-        <Button text="Buscar" layoutX="300" layoutY="20" onAction="#handleBuscarUsuarioAction"/>
+        <Label layoutX="14.0" layoutY="20.0" text="Buscar Usuario:" />
+        <TextField fx:id="buscarUsuarioField" layoutX="101.0" layoutY="16.0" prefHeight="26.0" prefWidth="198.0" />
+        <Button layoutX="306.0" layoutY="16.0" onAction="#handleBuscarUsuarioAction" text="Buscar" />
 
-        <ComboBox fx:id="resultadosBusquedaUsuario" layoutX="120" layoutY="60" prefWidth="200" onAction="#handleSeleccionUsuarioAction"/>
+        <ComboBox fx:id="resultadosBusquedaUsuario" layoutX="24.0" layoutY="52.0" onAction="#handleSeleccionUsuarioAction" prefHeight="26.0" prefWidth="333.0" />
 
-        <GridPane layoutX="20" layoutY="100" hgap="10" vgap="10">
+        <GridPane hgap="10" layoutX="20" layoutY="100" prefHeight="134.0" prefWidth="334.0" vgap="10">
             <children>
-                <Label text="Nombre:"/>
-                <TextField fx:id="nombreField" GridPane.columnIndex="1"/>
-                <Label text="Username:" GridPane.rowIndex="1"/>
-                <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                <Label text="Password:" GridPane.rowIndex="2"/>
-                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                <Label text="Role:" GridPane.rowIndex="3"/>
-                <TextField fx:id="roleField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label text="Nombre:" />
+                <TextField fx:id="nombreField" prefHeight="26.0" prefWidth="267.0" GridPane.columnIndex="1" />
+                <Label text="Username:" GridPane.rowIndex="1" />
+                <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Password:" GridPane.rowIndex="2" />
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Role:" GridPane.rowIndex="3" />
+                <TextField fx:id="roleField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
 
-        <Button text="Agregar" layoutX="20" layoutY="230" onAction="#handleAgregarUsuarioAction"/>
-        <Button text="Editar" layoutX="100" layoutY="230" onAction="#handleEditarUsuarioAction"/>
-        <Button text="Eliminar" layoutX="180" layoutY="230" onAction="#handleEliminarUsuarioAction"/>
+        <Button layoutX="14.0" layoutY="268.0" onAction="#handleAgregarUsuarioAction" text="Agregar" />
+        <Button layoutX="78.0" layoutY="268.0" onAction="#handleEditarUsuarioAction" text="Editar" />
+        <Button layoutX="136.0" layoutY="268.0" onAction="#handleEliminarUsuarioAction" text="Eliminar" />
+      <Button layoutX="308.0" layoutY="268.0" onAction="#menu" text="Menu" />
     </children>
 </AnchorPane>

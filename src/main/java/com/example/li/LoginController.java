@@ -1,6 +1,7 @@
 package com.example.li;
 
 
+import javafx.event.ActionEvent;
 import modelo.Usuario;
 import db.UsuarioDAO;
 import javafx.fxml.FXML;
@@ -25,7 +26,13 @@ public class LoginController {
 
     @FXML
     private Button loginButton;
-
+    Tools tools = new Tools();
+    public void salir(ActionEvent event){
+        tools.salir(event);
+    }
+    public void login(ActionEvent event){
+        tools.abrirLogin(event);
+    }
     @FXML
     private void handleLoginButtonAction() {
         String username = usernameField.getText();
@@ -42,7 +49,7 @@ public class LoginController {
                     stage.setTitle("Admin Menu");
                     stage.setScene(new Scene(root));
                 } else if (usuario.getRole().equals("vendedor")) {
-                    Parent root = FXMLLoader.load(getClass().getResource("VendedorMenu.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("ventas.fxml"));
                     stage.setTitle("Vendedor Menu");
                     stage.setScene(new Scene(root));
                 }

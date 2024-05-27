@@ -1,6 +1,7 @@
 package com.example.li;
 
 import db.UsuarioDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.StringConverter;
@@ -31,6 +32,10 @@ public class UsuarioController {
     private TextField roleField;
 
     private UsuarioDAO usuarioDAO;
+    Tools tools = new Tools();
+    public void menu(ActionEvent event){
+        tools.Menu(event);
+    }
 
     public UsuarioController() {
         usuarioDAO = new UsuarioDAO();

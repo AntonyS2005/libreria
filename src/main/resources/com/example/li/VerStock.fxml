@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.li.AdminMenuController">
-    <Label text="Buscar Producto" layoutX="120" layoutY="50"/>
-    <TextField fx:id="buscarStockField" promptText="Buscar por nombre" layoutX="100" layoutY="100" prefWidth="200" onAction="#handleBuscarStockAction"/>
-    <ComboBox fx:id="resultadosBusquedaStock" layoutX="100" layoutY="150" prefWidth="200"  onAction="#handleVerProductoStockAction"/>
-    <Label fx:id="detallesProductoLabel" layoutX="100" layoutY="200" prefWidth="200"/>
+<AnchorPane prefHeight="292.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.AdminMenuController">
+    <Label layoutX="28.0" layoutY="24.0" text="Buscar Producto" />
+    <TextField fx:id="buscarStockField" layoutX="131.0" layoutY="19.0" onAction="#handleBuscarStockAction" prefHeight="26.0" prefWidth="337.0" promptText="Buscar por nombre" />
+    <ComboBox fx:id="resultadosBusquedaStock" layoutX="31.0" layoutY="53.0" onAction="#handleVerProductoStockAction" prefHeight="26.0" prefWidth="430.0" />
+    <Label fx:id="detallesProductoLabel" layoutX="28.0" layoutY="94.0" prefHeight="26.0" prefWidth="430.0">
+      <font>
+         <Font size="15.0" />
+      </font></Label>
+   <Button layoutX="217.0" layoutY="245.0" mnemonicParsing="false" onAction="#menu" text="Menu" />
 </AnchorPane>

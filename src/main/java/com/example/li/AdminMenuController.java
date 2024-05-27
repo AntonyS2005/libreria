@@ -1,6 +1,8 @@
 package com.example.li;
 
 import db.ProductosDAO;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -63,12 +65,18 @@ public class AdminMenuController {
 
     @FXML
     private ComboBox<Producto> resultadosBusquedaStock;
+    private ProductosDAO productosDAO;
 
     @FXML
     private Label detallesProductoLabel;
 
-    private ProductosDAO productosDAO;
-
+    Tools tools = new Tools();
+    public void salir(ActionEvent event){
+        tools.salir(event);
+    }
+    public void menu(ActionEvent event){
+        tools.Menu(event);
+    }
     public AdminMenuController() throws SQLException {
         productosDAO = new ProductosDAO();
     }

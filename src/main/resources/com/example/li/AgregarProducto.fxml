@@ -5,11 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.AdminMenuController">
-    <Label layoutX="120" layoutY="50" text="Agregar Producto" />
-    <TextField fx:id="nombreField" layoutX="100" layoutY="100" prefWidth="200" promptText="Nombre" />
-    <TextField fx:id="costoField" layoutX="100" layoutY="150" prefWidth="200" promptText="Costo" />
-    <TextField fx:id="precioField" layoutX="100" layoutY="200" prefWidth="200" promptText="Precio" />
-    <TextField fx:id="stockField" layoutX="100" layoutY="250" prefWidth="200" promptText="Stock" />
-    <Button layoutX="150" layoutY="300" onAction="#handleAgregarProductoAction" text="Agregar" />
+<AnchorPane prefHeight="326.0" prefWidth="314.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.li.AdminMenuController">
+    <Label layoutX="103.0" layoutY="32.0" text="Agregar Producto" />
+    <TextField fx:id="nombreField" layoutX="57.0" layoutY="76.0" prefWidth="200" promptText="Nombre" />
+    <TextField fx:id="costoField" layoutX="57.0" layoutY="126.0" prefWidth="200" promptText="Costo" />
+    <TextField fx:id="precioField" layoutX="57.0" layoutY="176.0" prefWidth="200" promptText="Precio" />
+    <TextField fx:id="stockField" layoutX="57.0" layoutY="224.0" prefWidth="200" promptText="Stock" />
+    <Button layoutX="14.0" layoutY="286.0" onAction="#handleAgregarProductoAction" text="Agregar" />
+   <Button layoutX="227.0" layoutY="286.0" onAction="#menu" prefHeight="26.0" prefWidth="59.0" text="Menu" />
 </AnchorPane>
