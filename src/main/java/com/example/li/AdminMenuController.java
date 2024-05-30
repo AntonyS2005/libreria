@@ -80,6 +80,9 @@ public class AdminMenuController {
     public AdminMenuController() throws SQLException {
         productosDAO = new ProductosDAO();
     }
+    public void login(ActionEvent event){
+        tools.abrirLogin(event);
+    }
 
     @FXML
     private void initialize() {

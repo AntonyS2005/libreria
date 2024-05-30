@@ -19,6 +19,9 @@ public class Tools {
     @FXML
     public  void abrirLogin(ActionEvent event) {
         try {
+            Node source = (Node) event.getSource();
+            Stage stage1 = (Stage) source.getScene().getWindow();
+            stage1.close();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -32,6 +35,9 @@ public class Tools {
     @FXML
     public  void Menu(ActionEvent event) {
         try {
+            Node source = (Node) event.getSource();
+            Stage stage1 = (Stage) source.getScene().getWindow();
+            stage1.close();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminMenu.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
